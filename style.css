@@ -1,0 +1,508 @@
+/* =========================================
+   1. VARIABEL WARNA DAN PENGATURAN DASAR
+   ========================================= */
+
+:root {
+    --bg-color: #1c3739;
+    --card-color: #073b3b;
+    --text-color: #f5f4f0;
+    --border-color: #f5f4f0;
+    --muted-color: #d5e1df;
+    --font-body: "DM Mono", monospace;
+    --font-heading: "Playfair Display", Georgia, serif;
+    --border-width: 1px;
+    --radius-small: 10px;
+    --radius-large: 25px;
+}
+
+/* Mengatur perhitungan ukuran seluruh elemen */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mengatur scroll dan perpindahan halaman */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+/* Tampilan dasar halaman */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.4;
+    min-height: 100vh;
+}
+
+/* Menghilangkan garis bawah pada tautan */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Mengatur gambar agar tidak melebihi pembungkus */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* =========================================
+   2. PEMBUNGKUS UTAMA WEBSITE
+   ========================================= */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 41px 9px 18px;
+}
+
+/* =========================================
+   3. NAVIGASI UTAMA
+   ========================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+/* Bentuk tombol navigasi */
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 2px 15px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--radius-small);
+    font-size: 15px;
+    line-height: 1.3;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Efek ketika navigasi diarahkan atau difokuskan */
+.nav-link:hover,
+.nav-link:focus-visible {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* =========================================
+   4. KOTAK HERO DAN PROFIL
+   ========================================= */
+
+.section-box {
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 5px;
+}
+
+/* Kotak utama bagian Home */
+.hero {
+    padding: 4px 9px 48px;
+    scroll-margin-top: 20px;
+}
+
+/* Judul besar nama pemilik portofolio */
+.hero-heading {
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+.hero-heading h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(25px, 5.6vw, 43px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -1.2px;
+    white-space: nowrap;
+}
+
+/* Kalimat profesi di bawah nama */
+.tagline {
+    font-family: var(--font-heading);
+    font-size: clamp(10px, 2.9vw, 13px);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* Posisi teks dan foto profil */
+.hero-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 38%;
+    align-items: center;
+    gap: 12px;
+    padding: 0 5px;
+}
+
+/* Deskripsi pendek pada bagian Home */
+.hero-description {
+    font-size: clamp(13px, 3.8vw, 17px);
+    line-height: 1.25;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+/* Foto profil berbentuk lingkaran */
+.profile-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    background-color: var(--text-color);
+}
+
+/* =========================================
+   5. LABEL JUDUL SETIAP BAGIAN
+   ========================================= */
+
+.section-label {
+    display: table;
+    min-width: 115px;
+    padding: 2px 16px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--radius-small);
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/* =========================================
+   6. BAGIAN ABOUT ME
+   ========================================= */
+
+.about-section {
+    margin-top: 12px;
+    scroll-margin-top: 20px;
+}
+
+/* Kotak deskripsi About Me */
+.about-card {
+    margin-top: 10px;
+    padding: 15px 5px 28px;
+    background-color: var(--card-color);
+}
+
+/* Paragraf tentang pemilik portofolio */
+.about-description {
+    font-size: 13px;
+    line-height: 1.34;
+    overflow-wrap: break-word;
+}
+
+/* Susunan tombol keahlian */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 9px;
+}
+
+/* Bentuk tombol keahlian */
+.skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 24px;
+    padding: 2px 14px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 20px;
+    font-size: 12px;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+/* =========================================
+   7. BAGIAN PROJECT
+   ========================================= */
+
+.project-section {
+    margin-top: 14px;
+    scroll-margin-top: 20px;
+}
+
+/* Jarak antara judul dan daftar proyek */
+.project-list {
+    display: grid;
+    gap: 13px;
+    margin-top: 16px;
+}
+
+/* Tombol proyek berbentuk kapsul */
+.project-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 54px;
+    padding: 10px 35px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 35px;
+    background-color: var(--card-color);
+    font-size: clamp(20px, 5.5vw, 26px);
+    line-height: 1.2;
+    text-align: center;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+/* Ikon panah muncul saat tombol diarahkan */
+.project-arrow {
+    position: absolute;
+    right: 18px;
+    opacity: 0;
+    transform: translate(-4px, 4px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Efek interaktif tombol proyek */
+.project-link:hover,
+.project-link:focus-visible {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.project-link:hover .project-arrow,
+.project-link:focus-visible .project-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* =========================================
+   8. BAGIAN CONTACT
+   ========================================= */
+
+.contact-section {
+    margin-top: 12px;
+    scroll-margin-top: 20px;
+}
+
+/* Susunan tombol kontak */
+.contact-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+/* Tombol email dan Instagram */
+.contact-link {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    min-height: 54px;
+    padding: 8px 30px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 35px;
+    background-color: var(--card-color);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Ukuran ikon kontak */
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    justify-self: center;
+}
+
+/* Ukuran khusus ikon Instagram */
+.instagram-icon {
+    width: 34px;
+    height: 34px;
+}
+
+/* Teks email dan akun Instagram */
+.contact-link span {
+    font-size: clamp(11px, 3.5vw, 15px);
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* Efek ketika tombol kontak diarahkan */
+.contact-link:hover,
+.contact-link:focus-visible {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* =========================================
+   9. FOOTER
+   ========================================= */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 20px;
+    padding: 10px 2px;
+    color: var(--muted-color);
+    font-size: 11px;
+    text-align: center;
+}
+
+/* =========================================
+   10. PENYESUAIAN UNTUK HP KECIL
+   ========================================= */
+
+@media (max-width: 360px) {
+    .container {
+        padding-top: 25px;
+    }
+
+    .navbar {
+        gap: 5px;
+    }
+
+    .nav-link {
+        padding: 3px 9px;
+        font-size: 13px;
+    }
+
+    .hero-heading h1 {
+        font-size: 23px;
+        letter-spacing: -0.8px;
+    }
+
+    .hero-content {
+        grid-template-columns: minmax(0, 1fr) 35%;
+        gap: 8px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .contact-link {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+/* =========================================
+   11. PENYESUAIAN UNTUK TABLET DAN LAPTOP
+   ========================================= */
+
+@media (min-width: 600px) {
+    .container {
+        padding: 40px 24px 25px;
+    }
+
+    .navbar {
+        margin-bottom: 16px;
+    }
+
+    .nav-link {
+        padding: 5px 20px;
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 15px 22px 45px;
+    }
+
+    .hero-heading {
+        margin-bottom: 25px;
+    }
+
+    .hero-heading h1 {
+        font-size: clamp(38px, 5vw, 54px);
+        letter-spacing: -1.5px;
+    }
+
+    .tagline {
+        font-size: 15px;
+    }
+
+    .hero-content {
+        grid-template-columns: minmax(0, 1fr) 230px;
+        gap: 35px;
+        padding: 0 15px;
+    }
+
+    .hero-description {
+        font-size: 19px;
+        line-height: 1.45;
+    }
+
+    .profile-photo {
+        width: 210px;
+        justify-self: center;
+    }
+
+    .about-card {
+        padding: 22px 18px 30px;
+    }
+
+    .about-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .skill {
+        padding: 5px 17px;
+        font-size: 13px;
+    }
+
+    .project-link {
+        min-height: 70px;
+        font-size: 28px;
+    }
+
+    .contact-link {
+        min-height: 65px;
+        padding: 10px 45px;
+    }
+
+    .contact-link span {
+        font-size: 16px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   12. AKSESIBILITAS DAN ANIMASI
+   ========================================= */
+
+/* Memperjelas fokus saat navigasi memakai keyboard */
+a:focus-visible {
+    outline: 2px solid var(--text-color);
+    outline-offset: 4px;
+}
+
+/* Mengurangi animasi sesuai pengaturan perangkat */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Animasi saat bagian website mulai terlihat */
+@media (prefers-reduced-motion: no-preference) {
+    main > section {
+        opacity: 0;
+        transform: translateY(8px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    main > section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

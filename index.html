@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Pengaturan karakter dan tampilan responsif -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Judul dan deskripsi website -->
+    <title>Viqri Alfahrezi | Portfolio</title>
+    <meta name="description" content="Portofolio Muhamad Viqri Alfahrezi, siswa Desain Komunikasi Visual yang tertarik pada desain grafis dan identitas visual.">
+
+    <!-- Menghubungkan font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ikon website pada tab browser -->
+    <link rel="icon" href="assets/foto.png" type="image/png">
+</head>
+<body>
+    <!-- Pembungkus utama seluruh website -->
+    <div class="container">
+
+        <!-- Navigasi utama -->
+        <header class="navbar">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#project" class="nav-link">Project</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </header>
+
+        <main>
+            <!-- Bagian Home atau hero -->
+            <section id="home" class="hero section-box">
+                <!-- Nama dan profesi -->
+                <div class="hero-heading">
+                    <h1>VIQRI ALFAHREZI</h1>
+                    <p class="tagline">Visual Designer crafting ideas into meaningful visuals.</p>
+                </div>
+
+                <!-- Deskripsi singkat dan foto profil -->
+                <div class="hero-content">
+                    <p class="hero-description">
+                        I'm a visual design student passionate about creating
+                        visual identities and designs that communicate ideas
+                        effectively.
+                    </p>
+                    <img src="assets/foto.png"
+                         alt="Foto profil Muhamad Viqri Alfahrezi"
+                         class="profile-photo">
+                </div>
+            </section>
+
+            <!-- Bagian About Me -->
+            <section id="about" class="about-section">
+                <h2 class="section-label">About Me</h2>
+                <div class="about-card section-box">
+                    <p class="about-description">
+                        I'm Viqri, a Visual Communication Design student
+                        passionate about graphic design and visual
+                        storytelling. I enjoy exploring typography, colors,
+                        and different design styles to create meaningful and
+                        engaging visuals. I'm always eager to learn new
+                        techniques, develop my skills, and turn creative
+                        ideas into effective visual communication.
+                    </p>
+
+                    <!-- Daftar software dan keahlian -->
+                    <div class="skills">
+                        <span class="skill">Adobe Illustrator</span>
+                        <span class="skill">CorelDRAW</span>
+                        <span class="skill">Figma</span>
+                        <span class="skill">Canva</span>
+                        <span class="skill">Photoshop</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bagian Project -->
+            <section id="project" class="project-section">
+                <h2 class="section-label">Project</h2>
+                <div class="project-list">
+                    <!-- Ganti tautan contoh dengan tautan proyek milikmu -->
+                    <a href="https://www.behance.net/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <span>Logo Design</span>
+                        <span class="project-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a href="https://www.behance.net/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <span>Poster Design</span>
+                        <span class="project-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Bagian Contact -->
+            <section id="contact" class="contact-section">
+                <h2 class="section-label">Contact</h2>
+                <div class="contact-list">
+                    <!-- Kontak email -->
+                    <a href="mailto:viqrialfahrezi2@gmail.com" class="contact-link">
+                        <!-- Ikon email SVG -->
+                        <svg class="contact-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                            <rect x="3" y="6" width="26" height="20" stroke="currentColor" stroke-width="2"/>
+                            <path d="M4 7L16 18L28 7" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>viqrialfahrezi2@gmail.com</span>
+                    </a>
+
+                    <!-- Kontak Instagram -->
+                    <a href="https://www.instagram.com/afhreziii49/"
+                       class="contact-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <!-- Ikon Instagram SVG -->
+                        <svg class="contact-icon instagram-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                            <rect x="3" y="3" width="26" height="26" rx="7" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="24" cy="8.5" r="1.5" fill="currentColor"/>
+                        </svg>
+                        <span>@afhreziii49</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer website -->
+        <footer class="footer">
+            <p>© <span id="year"></span> Viqri Alfahrezi.</p>
+            <p>Designed with creativity.</p>
+        </footer>
+    </div>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
